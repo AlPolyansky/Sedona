@@ -23,15 +23,23 @@
 		@extend %reset;
 		border-bottom: 1px solid $border-bottom-color;
 		border-top: 1px solid $border-top-color;
+		&:hover{
+			background-color: darken(desaturate(adjust-hue($colorMain, -0.2963), 5.7018), 8.8235);
+		}
 	}
 	&__link{
 		@extend %reset;
 		display: inline-block;
 		font-weight: 900;
 		padding: 17px 0;
-		
+		transition: .1s;
+		&:active{
+			opacity: .3;
+		}
 	}
 }
+
+
 
 
 
@@ -47,7 +55,6 @@
 		color: $colorBase;
 		position: absolute;
 		z-index: 10;
-		
 		&__list{
 			font-size: 0;
 			text-align: left;
@@ -61,6 +68,9 @@
 			float: none;
 			display: inline-block;
 			text-align: center;
+			&:hover{
+				background-color: transparent;
+			}
 			&:nth-child(3){
 				@include pull(2.4);
 			}
@@ -74,11 +84,21 @@
 		}
 		&__link{
 			padding: 0;
+			&:hover{
+				color: $colorMain;
+			}
 		}
 	}
+	.menu__item--active
+	.menu__link{
+		color: #766357;
+		&:hover{
+			color: #604e43;
+		}
+}
 }
 
-@include apply-to($desktop - 180px){
+@include apply-to($desktop){
 	.menu{
 		max-width: 1200px;
 		margin: 0 auto;
@@ -86,3 +106,6 @@
 		right: 0;
 	}
 }
+
+
+

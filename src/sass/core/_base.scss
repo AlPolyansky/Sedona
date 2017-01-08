@@ -12,6 +12,16 @@ body,html{
 	background-color: #f2f2f2;
 }
 
+::selection{
+	background-color: $colorMain;
+	color: $colorLight;
+}
+
+.wrapper{
+	max-width: 1200px;
+	margin: 0 auto;
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+}
 
 .container{
 	width: 100%;
@@ -26,3 +36,14 @@ body,html{
 	}
 }
 
+.container--inner{
+	width: 100%;
+	margin: 0 auto;
+	max-width: 280px;
+	@include apply-to($tablet){
+		max-width: 668px;
+	}
+	@include apply-to($desktop){
+		max-width: 1200px;
+	}
+}

@@ -5,7 +5,7 @@
 		display: block;
 		width: 100%;
 		position: absolute;
-		bottom: -1px;
+		bottom: -2px;
 		height: 60px;
 		background: url("../img/angle.svg") no-repeat;
 		background-size: auto 96%;
@@ -14,7 +14,8 @@
 	&__content{
 		position: relative;
 		height: 389px;
-		background: url("../img/header-desktop.jpg") no-repeat center;
+		background: url("../img/header-desktop.jpg") no-repeat;
+		background-position: center top;
 	}
 	&__text{
 		@include center();
@@ -31,5 +32,15 @@
 	.header__text{
 		top: 49%;
 		max-width: 460px;
+	}
+}
+
+
+@include apply-to($desktop){
+	.header__content{
+		background-size: cover;
+	}
+	.header:after{
+		background-size: 100%;
 	}
 }

@@ -1,0 +1,15 @@
+.title{
+	font-size: 18px;
+	font-weight: 900;
+	margin: 0 auto;
+	text-transform: uppercase;
+	line-height: em(23px);
+	@extend %reset;
+}
+
+@include apply-to($tablet){
+	.title{
+		font-size: 21px;
+		line-height: em(21px);
+	}
+}
