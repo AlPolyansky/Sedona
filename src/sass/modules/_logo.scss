@@ -1,0 +1,26 @@
+.logo{
+	@extend %reset;
+	max-width: 102px;
+	max-height: 83px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 100;
+	user-select: none;
+	&__container{
+		display: block;
+	}
+	&__img{
+		width: 100%;
+		display: block;
+	}
+}
+
+@include apply-to($desktop){
+	.logo{
+		max-width: 188px;
+		max-height: 96px;
+	}
+}
+

@@ -1,0 +1,52 @@
+//--- variables
+
+$sandwich--color: $colorMain;
+$sandwich--containerHight: 20px;
+$sandwich--containerWidth : 23px;
+$sandwich--lineHeight: 4px;
+
+.sandwich{
+	height: $sandwich--containerHight;
+	width: $sandwich--containerWidth;
+	position: absolute;
+	cursor: pointer;
+	&__line{
+		width: 100%;
+		height: $sandwich--lineHeight;
+		background-color: $sandwich--color;
+		transition: .2s;
+		margin: ($sandwich--containerHight*2 /5) 0 0;
+		position: relative;
+		&:after,&:before{
+			content: '';
+			transition: .2s;
+			display: block;
+			width: 100%;
+			position: absolute;
+			height: $sandwich--lineHeight;
+			background-color: $sandwich--color;
+		}
+		&:before{
+			top: $sandwich--containerHight * -2 / 5;
+		}
+		&:after{
+			top: $sandwich--containerHight * 2 / 5;
+		}
+	}
+
+
+}
+
+.sandwich--active{
+	.sandwich__line{
+		background: transparent;
+	}
+	.sandwich__line:before{
+		transform: translate(0px, ($sandwich--containerHight * 2 / 5)) rotate(-45deg);
+		background-color: $colorLight;
+	}
+	.sandwich__line:after{
+		transform: translate(0px, -($sandwich--containerHight * 2 / 5)) rotate(45deg);
+		background-color: $colorLight;
+	}
+}

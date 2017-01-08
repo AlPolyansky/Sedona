@@ -1,0 +1,26 @@
+.top-menu{
+	position: relative;
+	width: 100%;
+	height: 56px;
+	background-color: $colorLight;
+	&__sandwich{
+		top: 17px;
+		right: 20px;
+		z-index: 200;
+	}
+}
+
+
+
+@include apply-to($tablet){
+	.top-menu__sandwich{
+		display: none;
+	}
+}
+
+@include apply-to($desktop){
+	.top-menu{
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+}

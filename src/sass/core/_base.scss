@@ -8,7 +8,7 @@
 body,html{
 	height: 100%;
 	font-size: 100%;
-	font-family: $fontMain;
+	font-family: 'PT Sans', sans-serif;
 	background-color: #f2f2f2;
 }
 
@@ -17,6 +17,7 @@ body,html{
 	width: 100%;
 	margin: 0 auto;
 	max-width: 280px;
+	position: relative;
 	@include apply-to($tablet){
 		max-width: 648px;
 	}
