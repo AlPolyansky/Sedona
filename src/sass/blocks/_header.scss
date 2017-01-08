@@ -1,0 +1,35 @@
+.header{
+	position: relative;
+	&:after{
+		content: '';
+		display: block;
+		width: 100%;
+		position: absolute;
+		bottom: -1px;
+		height: 60px;
+		background: url("../img/angle.svg") no-repeat;
+		background-size: auto 96%;
+		background-position: center;
+	}
+	&__content{
+		position: relative;
+		height: 389px;
+		background: url("../img/header-desktop.jpg") no-repeat center;
+	}
+	&__text{
+		@include center();
+		top: 51%;
+		display: block;
+		max-width: 280px;
+	}
+}
+
+@include apply-to($tablet){
+	.header__content{
+		height: 518px;
+	}
+	.header__text{
+		top: 49%;
+		max-width: 460px;
+	}
+}

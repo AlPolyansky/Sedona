@@ -78,7 +78,7 @@
 	}
 }
 
-@include apply-to($desktop){
+@include apply-to($desktop - 180px){
 	.menu{
 		max-width: 1200px;
 		margin: 0 auto;
