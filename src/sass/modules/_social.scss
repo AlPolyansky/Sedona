@@ -1,0 +1,44 @@
+.social{
+
+
+	$animation-speed : .2s;
+	$container-height: 48px;
+	$container-width: 46px;
+	$gutter: 4px;
+
+	&__list{
+		@extend %reset;
+	}
+	&__item{
+		@extend %reset;
+		display: inline-block;
+		margin-right: $gutter;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+	&__link{
+		@extend %reset;
+		display: block;
+		height: $container-height;
+		width: $container-width;
+		background-color: $colorMain;
+		position: relative;
+		transition: $animation-speed;
+		&:hover{
+			background-color: darken(desaturate(adjust-hue($colorMain, -0.2963), 5.7018), 8.8235);
+		}
+		&:active{
+			background-color: darken(desaturate(adjust-hue($colorMain, -0.6772), 3.0646), 12.9412);
+			.social__ico{
+				opacity: .3;
+			}
+		}
+	}
+	&__ico{
+		transition: $animation-speed;
+		fill: $colorLight;
+		@include center();
+	}
+	
+}
