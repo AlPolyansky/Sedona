@@ -1,0 +1,10 @@
+{
+	"desktop" : "1280px",
+	"tablet" : "768px",
+	"mobile" : "480px",
+	"colorLight" : "#ffffff",
+	"colorMain" : "#81b3d2",
+	"colorBase" : "#000000",
+	"colorText" : "#333333",
+	"fontMain"	: "'PT Sans, sans-serif, Tahoma'"
+}

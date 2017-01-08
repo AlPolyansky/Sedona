@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic');
+
+
+*,*:after,*:before{
+	box-sizing: border-box;
+}
+
+body,html{
+	height: 100%;
+	font-size: 100%;
+	font-family: $fontMain;
+	background-color: #f2f2f2;
+}
+
+
+.container{
+	width: 100%;
+	margin: 0 auto;
+	max-width: 280px;
+	@include apply-to($tablet){
+		max-width: 648px;
+	}
+	@include apply-to($desktop){
+		max-width: 1200px;
+	}
+}
+
