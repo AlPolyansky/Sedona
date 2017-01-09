@@ -1,0 +1,60 @@
+.card-info{
+	text-align: center;
+	padding: 40px 20px 38px;
+	text-transform: uppercase;
+	&__title{
+		margin-bottom: 10px;
+	}
+	&__text{
+		text-transform: uppercase;
+	}
+	&__ico{
+		fill: $colorMain;
+	}
+	&__number{
+		margin-bottom: 17px;
+		position: relative;
+		display: inline-block;
+		&:before,&:after{
+			content: '';
+			width: 9px;
+			height: 2px;
+			opacity: .5;
+			background-color: currentColor;
+			display: block;
+			position: absolute;
+		}
+		&:before{
+			top: 50%;
+			left: -50%;
+		}
+		&:after{
+			top: 50%;
+			right: -50%;
+		}
+	}
+}
+
+@include apply-to($tablet){
+	.card-info{
+		padding: 44px 43px 0;
+		&__title{
+			margin-bottom: 11px;
+			max-width: 200px;
+		}
+		&__number{
+			margin-bottom: 21px;
+		}
+	}
+}
+
+
+
+@include apply-to($desktop){
+	.card-info{
+		padding: 51px 59px 0;
+		&__title{
+			margin-bottom: 11px;
+		}
+	}
+}

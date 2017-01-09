@@ -1,0 +1,104 @@
+.skills{
+	@include clear();
+	background-color: $colorLight;
+	padding-top: 35px;
+	padding-bottom: 10px;
+	&__container{
+		@include clear();
+	}
+	&__content{
+		text-align: left;
+		position: relative;
+		padding-left: 50px;
+		padding-top: 0;
+		padding-bottom: 0px;
+	}
+	&__part{
+		margin-bottom: 30px;
+	}
+	&__ico{
+		position: absolute;
+		left: 0;
+		top: -10px;
+	}
+}
+
+@include apply-to($tablet){
+
+	.skills{
+		
+		padding-top: 67px;
+		padding-bottom: 35px;
+
+		&__container{
+			max-width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		&__part{
+			@include col(4);
+			margin: 0;
+			&:nth-child(1){
+				order: 0
+			}
+			&:nth-child(2){
+				order: 2
+			}
+			&:nth-child(3){
+				order: 1
+			}
+		}
+		&__content{
+			text-align: center;
+			padding: 0;
+			padding-left: 52px;
+			padding-right: 50px;
+		}
+		&__title{
+			margin-bottom: 20px;
+		}
+		&__ico{
+			position: relative;
+			margin-bottom: 14px;
+			&--house{
+				width: 75px;
+				height: 72px;
+			}
+			&--gift{
+				width: 64px;
+				height: 75px; 
+			}
+			&--burger{
+				width: 77px;
+				height: 68px;
+				top: -4px;
+			}
+		}
+	}
+	
+}
+
+
+@include apply-to($desktop){
+
+	.skills{
+		
+		padding-top: 19px;
+		padding-bottom: 59px;
+		&__title{
+			margin-bottom: 19px;
+		}
+		&__part{
+			&:nth-child(1){
+				padding: 0 20px;
+			}
+			&:nth-child(2){
+				padding: 0 45px;
+			}
+			&:nth-child(3){
+				padding: 0 23px;
+			}
+		}
+	}
+	
+}

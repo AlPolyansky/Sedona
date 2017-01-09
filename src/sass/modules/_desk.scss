@@ -1,0 +1,54 @@
+.desk{
+	position: relative;
+	@include clear();
+	background-color: $colorMain;
+	color: $colorLight;
+	&__part{
+		&:nth-child(1){
+			position: relative;		
+		}
+	}
+	&__img{
+		display: block;
+		min-height: 260px;
+		background: no-repeat $colorMain center/cover;
+	}
+}
+
+
+
+@include apply-to($tablet){
+	.desk{
+		&__triangle{
+			display: none;
+		}
+		&__part{
+			&:nth-child(1){
+				@include col(4);
+			}
+			&:nth-child(2){
+				@include col(8);
+			}
+		}
+		&__img{
+			min-height: 256px;
+		}
+	}
+}
+
+
+
+
+
+// modificators
+
+@include apply-to($tablet){
+	.desk--reverse{
+		.desk__part:nth-child(1){
+			@include pull(8);
+		}
+		.desk__part:nth-child(2){
+			@include push(4);
+		}
+	}
+}

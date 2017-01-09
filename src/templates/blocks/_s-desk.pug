@@ -1,0 +1,41 @@
+section.s-desk
+	.desk
+		.desk__part
+			.card-info
+				h2.title.card-info__title
+					|Настроящий
+					|городок
+				.card-info__number №1
+				.card-info__text.text СЕДОНА НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ
+		.desk__part
+			.desk__img(style='background-image : url("../img/photo-city.jpg")')
+	.skills
+		.container.skills__container
+			.skills__part
+				.card-info.skills__content
+					+svg('house','i-house skills__ico card-info__ico skills__ico--house')
+					h2.title.card-info__title.skills__title Жилье
+					.card-info__text.text Рекомендуем пожить в настоящем мотеле, все как в кино!
+			.skills__part
+				.card-info.skills__content
+					+svg('gift','i-gift skills__ico card-info__ico skills__ico--gift')
+					h2.title.card-info__title.skills__title СУВЕНИРЫ
+					.card-info__text.text Не только китайского, но и местного производства!
+			.skills__part
+				.card-info.skills__content
+					+svg('burger','i-house skills__ico card-info__ico skills__ico--burger')
+					h2.title.card-info__title.skills__title ЕДА
+					.card-info__text.text Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!
+	.desk.desk--reverse
+		.desk__part
+			.card-info
+				h2.title.card-info__title Там есть мост дьявола
+				.card-info__number №2
+				.card-info__text.text
+					|Да, по нему можно пройти!
+					|Если конечно вы осмелитесь
+		.desk__part
+			.desk__img(style='background-image : url("../img/photo-bridge.jpg")')
+	svg.triangle.s-desk__triangle(version='1.1' xml:space='preserve', viewbox='0 0 100 160', preserveaspectratio='none')
+			polygon(points='0,0 50.1,160 50.1,220 0,220 0,160')
+			polygon(points='49.9,160 100,0 100,160 100,220 49.9,220')

@@ -16,9 +16,6 @@
 	&__text{
 		text-transform: uppercase;
 	}
-	&__triangle{
-		fill: $colorMain;
-	}
 }
 
 
@@ -30,9 +27,6 @@
 		padding-bottom: 38px;
 		&__title{
 			margin-bottom: em(13px);
-		}
-		&__triangle{
-			display: none;
 		}
 	}
 

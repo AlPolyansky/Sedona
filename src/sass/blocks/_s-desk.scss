@@ -1,0 +1,13 @@
+.s-desk{
+	position: relative;
+	&__triangle{
+		bottom: 99.9%;
+		fill: $colorMain;
+	}
+}
+
+@include apply-to($tablet){
+	.s-desk__triangle{
+		display: none;
+	}
+}
