@@ -1,0 +1,62 @@
+.footer{
+	@include clear();
+	padding-top: 37px;
+	padding-bottom: 24px;
+	background-color: $colorLight;
+	.container{
+		@include clear();
+	}
+	&__part{
+		@include col(12);
+		text-align: center;
+		&:nth-child(1){
+			margin-bottom: 37px;
+		}
+		&:nth-child(2){
+			margin-bottom: 36px;
+		}
+		&:nth-child(3){
+			
+		}
+	}
+	&__text{
+		text-transform: uppercase;
+		font-size: 21px;
+		font-weight: 900;
+	}
+}
+
+@include apply-to($tablet){
+	.footer{
+		padding-top: 38px;
+		&__part{
+			@include col(4);
+			&:nth-child(1){
+				text-align: left;
+				margin-bottom: 0;
+				margin-top: 10px;
+			}
+			&:nth-child(2){
+				margin-bottom: 0;
+			}
+			&:nth-child(3){
+				text-align: right;
+				margin-top: 6px;
+			}
+		}
+	}
+}
+
+
+@include apply-to($desktop){
+	.footer{
+		&__part{
+			&:nth-child(1){
+				text-align: center;
+			}
+			&:nth-child(3){
+				padding-right: 45px;
+			}
+		}
+	}
+}
