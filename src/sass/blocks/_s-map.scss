@@ -1,0 +1,62 @@
+.s-map{
+	padding-top: 27px;
+	text-align: center;
+	background-color: $colorLight;
+	&__title{
+		font-size: 21px;
+		margin-bottom: 20px;
+	}
+	&__devider{
+		display: none;
+	}
+	&__text{
+		text-transform: uppercase;
+		line-height: em(26px);
+		margin-bottom: 38px;
+	}
+	&__button{
+		margin-bottom: 47px;
+	}
+	&__map{
+		height: 350px;
+	}
+}
+
+@include apply-to($tablet){
+	.s-map{
+		padding-top: 50px;
+		&__container{
+			max-width: 460px;
+		}
+		&__title{
+			font-size: 30px;
+			margin-bottom: 27px;
+		}
+		&__devider{
+			display: block;
+		}
+		&__text{
+			margin-bottom: 43px;
+		}
+		&__button{
+			margin-bottom: 58px;
+		}
+	}
+}
+
+@include apply-to($desktop){
+	.s-map{
+		&__container{
+			max-width: 460px;
+		}
+		&__title{
+			margin-bottom: 25px;
+		}
+		&__text{
+			margin-bottom: 49px;
+		}
+		&__button{
+			margin-bottom: 65px;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+.button{
+	@extend %reset;
+	font-size: 21px;
+	text-transform: uppercase;
+	color: $colorLight;
+	background-color: $colorMain;
+	text-align: center;
+	&__text{
+		@extend %reset;
+		font-weight: 700;
+		padding: em(13px) 0;
+		cursor: pointer;
+	}
+}
