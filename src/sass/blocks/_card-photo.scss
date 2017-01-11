@@ -1,0 +1,37 @@
+.card-photo{
+	@extend %reset;
+	text-align: left;
+	font-size: 14px;
+	&__img{
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		margin-bottom: 18px;
+	}
+	&__content{
+
+	}
+	&__name{
+		@extend %reset;
+		text-transform: uppercase;
+		font-weight: 900;
+		margin-bottom: 9px;
+	}
+	&__author{
+		margin-bottom: 10px;
+		@extend %reset;
+	}
+	&__like-ico{
+		fill: #b2b2b2;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+	&__like-number{
+		display: inline-block;
+		font-weight: 900;
+		position: relative;
+		top: 2px;
+		vertical-align: middle;
+	}
+}

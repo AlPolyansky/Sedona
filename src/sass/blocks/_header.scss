@@ -13,25 +13,49 @@
 	}
 	&__content{
 		position: relative;
-		height: 389px;
 		background: url("../img/header-desktop.jpg") no-repeat;
-		background-position: center top;
+		background-position: center -300px;
+		height: 158px;
 	}
 	&__text{
 		@include center();
-		top: 51%;
+		top: 45%;
 		display: block;
+		fill: $colorLight;
+		max-width: 227px;
+	}
+}
+
+#home{
+	.header__content{
+		height: 389px;
+		background-position: center top;
+	}
+	.header__text{
+		top: 51%;
 		max-width: 280px;
 	}
 }
 
 @include apply-to($tablet){
 	.header__content{
-		height: 518px;
+		height: 290px;
+		background-position: center bottom;
 	}
 	.header__text{
-		top: 49%;
+		top: 46%;
 		max-width: 460px;
+		width: 100%;
+	}
+
+	#home{
+		.header__content{
+			height: 518px;
+		}
+		.header__text{
+			top: 49%;
+			max-width: 460px;
+		}
 	}
 }
 
@@ -42,5 +66,21 @@
 	}
 	.header:after{
 		background-size: 100%;
+	}
+
+	.header__content{
+		height: 300px;
+	}
+	.header__text{
+		top: 47%;
+	}
+
+	#home{
+		.header__content{
+			background-size: cover;
+		}
+		.header:after{
+			background-size: 100%;
+		}
 	}
 }

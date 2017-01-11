@@ -5,10 +5,18 @@
 	color: $colorLight;
 	background-color: $colorMain;
 	text-align: center;
+	transition: .2s;
 	&__text{
 		@extend %reset;
 		font-weight: 700;
 		padding: em(13px) 0;
 		cursor: pointer;
+	}
+	&:hover{
+		background-color: darken(desaturate(adjust-hue($colorMain, -0.2963), 5.7018), 8.8235);
+	}
+	&:active{
+		color: rgba($colorLight,.3);
+		background-color: darken(desaturate(adjust-hue($colorMain, -0.6772), 3.0646), 12.9412);
 	}
 }
