@@ -33,6 +33,9 @@
 			right: -50%;
 		}
 	}
+	.title__devider{
+		display: none;
+	}
 }
 
 @include apply-to($tablet){
@@ -40,10 +43,12 @@
 		padding: 44px 43px 0;
 		&__title{
 			margin-bottom: 11px;
-			max-width: 200px;
 		}
 		&__number{
 			margin-bottom: 21px;
+		}
+		.title__devider{
+			display: block;
 		}
 	}
 }

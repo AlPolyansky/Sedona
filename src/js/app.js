@@ -4,6 +4,7 @@ var commonModule = (function(){
 	var _plugins = function(){
 		svg4everybody();
 		picturefill();
+		Hyphenator.run();
 	};
 
 

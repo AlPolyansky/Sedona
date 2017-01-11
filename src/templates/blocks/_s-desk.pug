@@ -4,6 +4,7 @@ section.s-desk
 			.card-info
 				h2.title.card-info__title
 					|Настроящий
+					br.title__devider
 					|городок
 				.card-info__number №1
 				.card-info__text.text СЕДОНА НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ
@@ -29,13 +30,44 @@ section.s-desk
 	.desk.desk--reverse
 		.desk__part
 			.card-info
-				h2.title.card-info__title Там есть мост дьявола
+				h2.title.card-info__title
+					|Там есть
+					br.title__devider
+					|мост дьявола
 				.card-info__number №2
-				.card-info__text.text
-					|Да, по нему можно пройти!
-					|Если конечно вы осмелитесь
+				.card-info__text.text.
+					Да, по нему можно пройти! Если конечно вы осмелитесь
 		.desk__part
 			.desk__img(style='background-image : url("../img/photo-bridge.jpg")')
+	.extra-info
+		.container
+			.extra-info__part
+				.card-info.extra-info__card
+					h2.title.card-info__title
+						|НЕБОЛЬШАЯ
+						br.title__devider
+						|ПЛОЩАДЬ
+					.card-info__number №3
+					.card-info__text.text.
+						ВСЕ достопримечательности находятся очень близко
+			.extra-info__part
+				.card-info.extra-info__card
+					h2.title.card-info__title
+						|КРАСИВАЯ
+						br.title__devider
+						|ДОРОГА
+					.card-info__number №4
+					.card-info__text.text.hyphenate.
+						ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!
+			.extra-info__part
+				.card-info.extra-info__card
+					h2.title.card-info__title
+						|МАЛО
+						br.title__devider
+						|ТУРИСТОВ
+					.card-info__number №5
+					.card-info__text.text.hyphenate.
+						Большинство едет в гранд каньон и толпится там
 	svg.triangle.s-desk__triangle(version='1.1' xml:space='preserve', viewbox='0 0 100 160', preserveaspectratio='none')
 			polygon(points='0,0 50.1,160 50.1,220 0,220 0,160')
 			polygon(points='49.9,160 100,0 100,160 100,220 49.9,220')

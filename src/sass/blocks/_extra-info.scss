@@ -1,0 +1,50 @@
+.extra-info{
+	@include clear();
+	&__part{
+		border-bottom: 1px solid #d6d6d6;
+		&:last-child{
+			border: 0;
+		}
+	}
+	&__card{
+		padding: 27px 16px 26px;
+	}
+}
+
+
+
+@include apply-to($tablet){
+	.extra-info{
+		padding-bottom: 21px;
+		&__part{
+			@include col(4);
+			border: 0;
+		}
+		.card-info__text{
+			
+   	}
+   	.container{
+   		max-width: 100%;
+   	}
+	}
+}
+
+@include apply-to($desktop){
+	.extra-info{
+		padding-top: 43px;
+		padding-bottom: 65px;
+		&__part{
+			@include col(4);
+			border: 0;
+		}
+		&__card{
+			padding-top: 0;
+		}
+		.card-info__text{
+			
+   	}
+   	.container{
+   		max-width: 100%;
+   	}
+	}
+}
