@@ -4,7 +4,6 @@ var commonModule = (function(){
 	var _plugins = function(){
 		svg4everybody();
 		picturefill();
-		Hyphenator.run();
 	};
 
 
@@ -13,6 +12,20 @@ var commonModule = (function(){
 	var menuButton = $('.sandwich');
 
 	// Функции
+
+	var _objectFitImg = function(){
+		if ( ! Modernizr.objectfit ) {
+		  $('.card-photo').each(function () {
+		    var $container = $(this),
+		        imgUrl = $container.find('img').prop('src');
+		    if (imgUrl) {
+		      $container
+		        .css('backgroundImage', 'url(' + imgUrl + ')')
+		        .addClass('card-photo--object-fit');
+		    }  
+		  });
+		}
+	}
 
 	var sandwichOpen = function(e){
 		e.preventDefault();
@@ -23,13 +36,6 @@ var commonModule = (function(){
 		$this.toggleClass('sandwich--active');
 		menu.toggleClass(active);
 
-		/*if(menu.hasClass(active)){
-			$('body').css({
-				'transform': 'translateY(' + menu.height() + 'px)'
-			})
-		}else{
-			$('body').removeAttr('style');
-		}*/
 
 
 	};

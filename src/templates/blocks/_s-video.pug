@@ -1,0 +1,12 @@
+section.s-video
+	.container.s-video__container
+		h2.title.s-video__title Все еще сомневаетесь?
+		p.text.s-video__text
+			|Смотрите видеопрезентацию
+			br.s-video__devider
+			|и скорее за билетами, пока
+			br.s-video__devider
+			|они не подорожали в очередной раз!
+	video.video-player.video-js.vjs-default-skin(poster='./img/photo-5-desktop.jpg' controls
+	data-setup='{"controls:true"}')
+		source(src='./img/Mountain - 6952.mp4' type='video/mp4')

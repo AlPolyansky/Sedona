@@ -125,6 +125,7 @@ var path = {
 var scssLibs = [
   // Пример:  path.sourse.folder + '/normalize.css/normalize.css',
   path.sourse.libs + '/normalize.css/normalize.css',
+  'node_modules/video.js/dist/video-js.css',
 ];
 
 
@@ -136,7 +137,8 @@ var jsLibs = [
   path.sourse.libs + '/jquery/dist/jquery.min.js',
   'node_modules/svg4everybody/dist/svg4everybody.js',
   'node_modules/picturefill/dist/picturefill.js',
-  'src/js/Hyphenator.js',
+  'node_modules/video.js/dist/video.min.js',
+  'src/js/modernizr-custom.js',
 ];
 
 

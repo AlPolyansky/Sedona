@@ -1,0 +1,104 @@
+.video-player{
+	height: 200px;
+	width: 100%;
+	display: block;
+}
+
+
+.video-js{
+	&:hover{
+		.vjs-big-play-button{
+			background-color: transparent;
+			opacity: .7;
+		}
+	}
+	&:active{
+		.vjs-big-play-button{
+			opacity: .3;
+		}
+	}
+	.vjs{
+		&-poster{
+			background-size: cover;
+		}
+		&-big-play-button{
+			color: $colorBase;
+			@include center();
+			background-color: transparent;
+			border: none;
+			font-size: 60px;
+			width: 50px;
+			height: 50px;
+			opacity: 1;
+			transition: .3s;
+			background-image: url("../img/play.svg");
+			background-size: contain;
+			background-repeat: no-repeat;
+			border-radius: 0;
+			&:before{
+				display: none;
+			}
+		}
+		&-control-bar{
+			background-color: #f2f2f2;
+			width: 80%;
+			margin: 0 auto;
+			color: #5c6870;
+			transform: translate(0,30px);
+			.vjs-progress-control{
+				position: absolute;
+				top: -100%;
+				width: 100%;
+				background-color: rgba($colorBase,.6);
+				color: $colorLight;
+			}
+			.vjs-slider-horizontal{
+				background-color: rgba($colorLight,.2);
+			}
+			.vjs-slider-bar{
+				background-color: rgba($colorLight,.2);
+			}
+			.vjs-fullscreen-control{
+				right: 0;
+				position: absolute;
+			}
+			.vjs-volume-level{
+				background: rgba($colorBase,.6);
+			}
+		}
+	}
+} 
+
+
+@include apply-to($tablet){
+	.video-player{
+		max-width: 648px;
+		margin: 0 auto;
+		height: 500px;
+	}
+	.video-js{
+		.vjs{
+			&-control-bar{
+				background-color: rgba($colorBase,.2);
+				width: 100%;
+				color: $colorLight;
+				transform: none;
+				.vjs-progress-control{
+					position: static;
+				}
+				.vjs-fullscreen-control{
+					position: relative;
+				}
+				.vjs-volume-level{
+					background: rgba($colorBase,.6);
+				}
+			}
+		}
+	}
+}
+
+@include apply-to($desktop){
+	.video-player{
+		max-width: 800px;
+	}
+}

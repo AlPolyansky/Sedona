@@ -26,31 +26,32 @@ html(lang='ru')
             block content
         script(src='./js/foundation.js' defer)
         script(src='./js/app.js' defer)
-        script.
-          function initMap() {
-            position = {lat: 40.7143528, lng: -74.0059731};
-              // Create a map object and specify the DOM element for display.
-              var map = new google.maps.Map(document.getElementById('map'), {
-                  center: position,
-                  scrollwheel: false,
-                  zoom: 10,
-                  disableDefaultUI: true
-              });
-              var image  = {
-                url : 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjEyNzU1MTNGRDg0NzExRTY5RUNCRkExNDdCNTUyMzY0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjEyNzU1MTQwRDg0NzExRTY5RUNCRkExNDdCNTUyMzY0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MTI3NTUxM0REODQ3MTFFNjlFQ0JGQTE0N0I1NTIzNjQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MTI3NTUxM0VEODQ3MTFFNjlFQ0JGQTE0N0I1NTIzNjQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz64tex6AAABdklEQVR42sRWu07DMBS9DmIIQaI8pA4wsLAgBibWjl3TqR34Fz6BfkSHdCprR1YmhBALCwtClXhKlAwIGR9kRZHl6+IEnCNZSa7v8YlvnGMTLYCUMlYtVS2TdmS6P6aqUOSWaqfSD8hv+Qqlsh7S34gIR7l8gXGES+yvhArB8viiXDp1mdheIv/8oov7N7qcvdP107yIH2wmdNhepaPtNYqXl7g59IQQZ4WY/qgvtszzu2ea3D7SXAlySJRQb2+LOrsbXMq6EnyN9MOJLWN09UCjm5lTCEA/8pDP4Gd8of+PD9uMMIAvjvfb3AxXMLOu7RuhdFUAXm6vRBdiAzOKxbCodK6Sgm/BAGJ9M4pVVwcMvx/ZouXlXQUcP6KAaF4MzlAHHB9iYzMIC6oDhj+GWGZG4XUJ73VOgAe+BRnEpmY01l5XBeAxpjyNlEHm6mZo9sByOjt+my7yGasaQieo6wfdz4Lu1M2dQYKerho5N/7XifhbgAEACnwV9fAvxX4AAAAASUVORK5CYII=',
-                size: new google.maps.Size(27, 27),
-                anchor: new google.maps.Point(0, 32),
-                origin: new google.maps.Point(0, 0),
+        if(page == 'home')
+          script.
+            function initMap() {
+              position = {lat: 40.7143528, lng: -74.0059731};
+                // Create a map object and specify the DOM element for display.
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    center: position,
+                    scrollwheel: false,
+                    zoom: 10,
+                    disableDefaultUI: true
+                });
+                var image  = {
+                  url : 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjEyNzU1MTNGRDg0NzExRTY5RUNCRkExNDdCNTUyMzY0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjEyNzU1MTQwRDg0NzExRTY5RUNCRkExNDdCNTUyMzY0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MTI3NTUxM0REODQ3MTFFNjlFQ0JGQTE0N0I1NTIzNjQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MTI3NTUxM0VEODQ3MTFFNjlFQ0JGQTE0N0I1NTIzNjQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz64tex6AAABdklEQVR42sRWu07DMBS9DmIIQaI8pA4wsLAgBibWjl3TqR34Fz6BfkSHdCprR1YmhBALCwtClXhKlAwIGR9kRZHl6+IEnCNZSa7v8YlvnGMTLYCUMlYtVS2TdmS6P6aqUOSWaqfSD8hv+Qqlsh7S34gIR7l8gXGES+yvhArB8viiXDp1mdheIv/8oov7N7qcvdP107yIH2wmdNhepaPtNYqXl7g59IQQZ4WY/qgvtszzu2ea3D7SXAlySJRQb2+LOrsbXMq6EnyN9MOJLWN09UCjm5lTCEA/8pDP4Gd8of+PD9uMMIAvjvfb3AxXMLOu7RuhdFUAXm6vRBdiAzOKxbCodK6Sgm/BAGJ9M4pVVwcMvx/ZouXlXQUcP6KAaF4MzlAHHB9iYzMIC6oDhj+GWGZG4XUJ73VOgAe+BRnEpmY01l5XBeAxpjyNlEHm6mZo9sByOjt+my7yGasaQieo6wfdz4Lu1M2dQYKerho5N/7XifhbgAEACnwV9fAvxX4AAAAASUVORK5CYII=',
+                  size: new google.maps.Size(27, 27),
+                  anchor: new google.maps.Point(0, 32),
+                  origin: new google.maps.Point(0, 0),
 
-              }
-               var marker = new google.maps.Marker({
-                position: position,
-                map: map,
-                title: 'Sedona',
-                icon : image
-              });
-          }
-        script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAUWCNbZ4BqkZYhXdQuMcWjp8QTTTJiiuQ&callback=initMap', async='', defer='')
+                }
+                 var marker = new google.maps.Marker({
+                  position: position,
+                  map: map,
+                  title: 'Sedona',
+                  icon : image
+                });
+            }
+          script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAUWCNbZ4BqkZYhXdQuMcWjp8QTTTJiiuQ&callback=initMap', async='', defer='')
 
 
          

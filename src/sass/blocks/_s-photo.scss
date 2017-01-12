@@ -1,7 +1,7 @@
 .s-photo{
 	text-align: center;
 	background-color: $colorLight;
-	padding-top: 38px;
+	
 	&__container{
 
 	}
@@ -16,6 +16,8 @@
 	}
 	&__photos{
 		border-top: 1px solid #e5e5e5;
+		@include clear();
+		text-align: left;
 	}
 	&__part{
 		border-bottom: 1px solid #e5e5e5;
@@ -29,13 +31,14 @@
 			display: block;
 		}
 	}
-	&__card-photo{
-		
-	}
 }
 
 @include apply-to($tablet){
 	.s-photo{
+		padding-top: 67px;
+		&__title{
+			font-size: 30px;
+		}
 		&__text-devider{
 			&:nth-child(1){
 				display: block;
@@ -44,5 +47,54 @@
 				display: none;
 			}
 		}
+		&__text{
+			margin-bottom: 67px;
+		}
+		&__photos{
+			border-top: none;
+			max-width: 648px;
+			margin: 0 auto;
+			font-size: 0;
+		}
+		&__part{
+			border: none;
+			padding: 0;
+			max-width: 50%;
+			width: 100%;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	.s-photo--best{
+		max-width: 100%;
+		width: 100%;
+		.card-photo__img-wrap{
+			max-height: 100%;
+		}
+		.card-photo__like{
+			right: 21px;
+			top: 47%;
+		}
+		.card-photo__like-ico{
+			margin-right: 5px;
+		}
+	}
+}
+
+@include apply-to($desktop){
+	.s-photo{
+		padding-top: 105px;
+		&__text{
+			margin-bottom: 70px;
+		}
+		&__photos{
+			max-width: 100%;
+		}
+		&__part{
+			max-width: 33.33333333333333%;
+		}
+	}
+	.s-photo--best{
+		max-width: 100%;
 	}
 }

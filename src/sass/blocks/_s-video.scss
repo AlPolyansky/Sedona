@@ -1,0 +1,57 @@
+.s-video{
+	background-color: $colorLight;
+	text-align: center;
+	padding-top: 32px;
+	padding-bottom: 106px;
+	&__title{
+		@extend %reset;
+		font-size: 18px;
+		margin-bottom: em(26px);
+	}
+	&__text{
+		@extend %reset;
+		text-transform: uppercase;
+		font-size: 14px;
+		margin-bottom: 39px;
+	}
+	&__devider{
+		&:nth-child(2){
+			display: none;
+		}
+	}
+}
+
+@include apply-to($tablet){
+	.s-video{
+		&__title{
+			font-size: 30px;
+		}
+		&__devider{
+			&:nth-child(1){
+				display: none;
+			}
+			&:nth-child(2){
+				display: block;
+			}
+		}
+	}
+}
+
+@include apply-to($tablet){
+	.s-video{
+		padding-top: 63px;
+		padding-bottom: 37px;
+		&__title{
+			margin-bottom: em(14px);
+		}
+		&__text{
+			margin-bottom: 76px;
+		}
+	}
+}
+
+@include apply-to($desktop){
+	.s-video{
+		padding-bottom: 80px;
+	}
+}
