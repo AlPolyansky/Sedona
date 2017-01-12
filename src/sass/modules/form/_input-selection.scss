@@ -1,0 +1,135 @@
+.input-selection{
+
+	// PUG structure
+
+	//	.input-selection
+	//		.input-selection__input-wrap
+	//			input.input-selection__input(type='radio' name='radio-good') ----  type = radio or checkbox
+	// 			svg(class='input-selection__ico')
+	//				use(xlink:href="./img/sprite.svg#" + imgName)    --- svg sprite id (icon)
+	//			.input-selection__inner
+
+	// .input-selection__inner  not working, if set svg
+
+
+	// values
+
+	$radio-height: 56px;
+	$radio-width: 56px;
+	$radio-border-radius: 50%;
+	$radio-color: #f2f2f2;
+	$radio-border: none;
+
+	$radio-inner-height: 22px;
+	$radio-inner-width: 22px;
+	$radio-inner-color: #333333;
+	$radio-inner-border-radius: 50%;
+	$radio-inner-border: none;
+
+	$radio-ico-color: #333333;
+	$radio-ico-height: 20px;
+	$radio-ico-width: 25px;
+
+	$radio-animation-time: .1s;
+
+
+	// styles
+
+	text-align: left;
+	display: inline-block;
+
+	&__input-wrap{
+		height: $radio-height;
+		width: $radio-width;
+		display: inline-block;
+		position: relative;
+		overflow: hidden;
+		display: inline-block;
+		vertical-align: middle;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		&:hover{
+			.input-selection__inner{
+				background-color: darken(saturate(adjust-hue($radio-color, 0.0000), 0.0000), 5.0980);
+			}
+		}
+		&:active{
+			.input-selection__inner{
+				background-color: darken(saturate(adjust-hue($radio-color, 0.0000), 0.0000), 11.3725);
+				&:after{
+					background-color: lighten(saturate(adjust-hue($radio-inner-color, 0.0000), 0.0000), 44.3137);
+				}
+			}
+			.input-selection__ico{
+				fill: lighten(saturate(adjust-hue($radio-ico-color, 0.0000), 0.0000), 44.3137);
+			}
+		}
+	}
+
+	&__input{
+		outline: none;
+		@include center();
+		opacity: 0;
+		height: $radio-height;
+		width: $radio-width;
+		z-index: 12;
+		cursor: pointer;
+		&:checked{
+			& + .input-selection__inner{
+				&:after{
+					opacity: 1;
+				}
+			}
+			& + .input-selection__ico{
+				opacity: 1;
+			}
+		}
+	}
+
+	&__inner{
+		border: $radio-border;
+		background-color: $radio-color;
+		position: absolute;
+		border-radius: $radio-border-radius;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		transition: $radio-animation-time;
+		&:after{
+			content: '';
+			display: block;
+			border: $radio-inner-border;
+			transition: $radio-animation-time;
+			border-radius: $radio-inner-border-radius;
+			height: $radio-inner-height;
+			width: $radio-inner-width;
+			background-color: $radio-inner-color;
+			z-index: 11;
+			@include center();
+			opacity: 0;
+		}
+	}
+
+	&__ico{
+		display: block;
+		width: 100%;
+		max-width: $radio-ico-width;
+		height: $radio-ico-height;
+		fill: $radio-ico-color;
+		@include center();
+		z-index: 11;
+		opacity: 0;
+		& + .input-selection__inner:after{
+			display: none;
+		}
+	}
+	&__label{
+		cursor: pointer;
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: em(16px);
+		font-size: 100%;
+	}
+
+}

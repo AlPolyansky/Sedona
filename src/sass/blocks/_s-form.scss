@@ -1,0 +1,22 @@
+.s-form{
+	text-align: center;
+	background-color: $colorLight;
+	padding-top: 39px;
+	&__title{
+		@extend %reset;
+		margin-bottom: 29px;
+	}
+	&__text{
+		@extend %reset;
+		text-transform: uppercase;
+		line-height: em(27px);
+		margin-bottom: 18px;
+	}
+	&__devider{
+		display: none;
+	}
+	&__part{
+		@extend %reset;
+		border-top: 1px solid #e5e5e5;
+	}
+}

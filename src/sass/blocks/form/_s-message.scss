@@ -1,0 +1,13 @@
+.s-message{
+	padding-top: 18px;
+	padding-bottom: 37px;
+	&__title{
+		margin-bottom: 17px;
+	}
+	&__textarea{
+		resize: none;
+		height: 160px;
+		line-height: em(22px);
+		margin-bottom: 52px;
+	}
+}

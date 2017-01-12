@@ -1,0 +1,19 @@
+.checkboxes{
+	padding-top: 19px;
+	padding-bottom: 25px;
+	&__title{
+		margin-bottom: 18px;
+	}
+	&__part{
+		text-align: left;
+		margin-bottom: 24px;
+		font-size: 18px;
+		font-weight: 900;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	.input-selection__inner{
+		border-radius: 0;
+	}
+}

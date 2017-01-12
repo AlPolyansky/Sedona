@@ -1,0 +1,18 @@
+.contats-info{
+	padding-top: 18px;
+	padding-bottom: 28px;
+	&__title{
+		margin-bottom: 27px;
+	}
+	&__part{
+		display: block;
+		margin-bottom: 46px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	.field__label{
+		margin-left: 21px;
+		margin-bottom: 10px;
+	}
+}

@@ -1,0 +1,12 @@
+extends ../_template
+block variables
+	-	pageTitle = 'Форма отзыва'
+	- page = 'form'
+block content
+	header.header
+		include ../modules/_top-menu
+		.header__content
+			+svg('sedona','header__text')
+	.content
+		include ../blocks/_s-form
+	include ../blocks/_footer

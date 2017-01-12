@@ -1,0 +1,93 @@
+form(method='POST' action="").s-form
+	.container.s-form__container
+		h1.title.s-form__title Оставьте свой отзыв
+		p.text.s-form__text
+			|Помогите нашим отелям стать лучше! оставьте отзыв о них,
+			br.s-form__devider
+			|а также о посещенных вами достопримечательностях
+	fieldset.s-form__part.s-form__fields.fields
+		.container
+			h2.title.fields__title Представьтесь, пожалуйста:
+			.field.fields__part
+				label.field__label(for='input-name') Имя:
+				input.field__input(id='input-name' type='text' name='name' placeholder='Петр')
+			.field.fields__part
+				label.field__label(for='input-sername') Фамилия:
+				input.field__input(id='input-sername' type='text' name='sername' placeholder='Иванов')
+			.field.fields__part
+				label.field__label(for='input-fatherName') Отчество:
+				input.field__input(id='input-fatherName' type='text' name='fatherName' placeholder='Александрович')
+	fieldset.s-form__part.contats-info
+		.container
+			h2.title.contats-info__title Контактная информация:
+			.field.contats-info__part
+				label.field__label(for='input-phone') Контактный телефон:
+				.field__input-wrap
+					input.field__input(id='input-phone' type='tel' name='phone' placeholder='Введите телефон')
+					.field__ico-wrap
+						+svg('phone','i-phone field__ico')
+			.field.contats-info__part
+				label.field__label(for='input-mail') Электронная почта:
+				.field__input-wrap
+					input.field__input(id='input-mail' type='text' name='email' placeholder='Введите e-mail')
+					.field__ico-wrap
+						+svg('mail','i-mail field__ico')
+	fieldset.s-form__part.radios
+		.container
+			h2.title.radios__title Ваше Общее впечатление:
+			.radios__part
+				.input-selection
+					.input-selection__input-wrap
+						input.input-selection__input(type='radio' name='radio-impression' id="radio-good" checked)
+						.input-selection__inner
+					label.input-selection__label(for="radio-good") Скорее положительное
+			.radios__part
+				.input-selection
+					.input-selection__input-wrap
+						input.input-selection__input(type='radio' name='radio-impression' id="radio-bad")
+						.input-selection__inner
+					label.input-selection__label(for="radio-bad") Скорее отрицательное
+			.radios__part
+				.input-selection
+					.input-selection__input-wrap
+						input.input-selection__input(type='radio' name='radio-impression' id="radio-unknown")
+						.input-selection__inner
+					label.input-selection__label(for="radio-unknown") Затрудняюсь ответить
+	fieldset.s-form__part.checkboxes
+		.container
+			h2.title.checkboxes__title Посещенные достопримечательности:
+			.checkboxes__part
+				.input-selection
+					.input-selection__input-wrap
+						input.input-selection__input(type='checkbox' name='devilBridge' id="checkbox-devilBridge" checked)
+						+svg('mark','input-selection__ico')
+						.input-selection__inner
+					label.input-selection__label(for="checkbox-devilBridge") Мост Дьявола
+			.checkboxes__part
+				.input-selection
+					.input-selection__input-wrap
+						input.input-selection__input(type='checkbox' name='slidePark' id="checkbox-slidePark")
+						+svg('mark','input-selection__ico')
+						.input-selection__inner
+					label.input-selection__label(for="checkbox-slidePark") Слайд-парк
+			.checkboxes__part
+				.input-selection
+					.input-selection__input-wrap
+						input.input-selection__input(type='checkbox' name='mountainBell' id="checkbox-mountainBell")
+						+svg('mark','input-selection__ico')
+						.input-selection__inner
+					label.input-selection__label(for="checkbox-mountainBell") Гора-Колокол
+			.checkboxes__part
+				.input-selection
+					.input-selection__input-wrap
+						input.input-selection__input(type='checkbox' name='redRocks' id="checkbox-redRocks")
+						+svg('mark','input-selection__ico')
+						.input-selection__inner
+					label.input-selection__label(for="checkbox-redRocks") Красные скалы
+	fieldset.s-form__part.s-message
+		.container
+			h2.title.s-message__title Опишите свои эмоции:
+			textarea.s-message__textarea.field__input(placeholder='Опишите подробно все свои восторги')
+			.button
+				button(type='submit').button__text Отправить отзыв
+					

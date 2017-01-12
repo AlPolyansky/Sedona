@@ -1,0 +1,16 @@
+.radios{
+	padding-top: 18px;
+	padding-bottom: 28px;
+	&__title{
+		margin-bottom: 23px;
+	}
+	&__part{
+		text-align: left;
+		font-weight: 900;
+		margin-bottom: 13px;
+		font-size: 18px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}

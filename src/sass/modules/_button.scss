@@ -11,6 +11,11 @@
 		font-weight: 700;
 		padding: em(13px) 0;
 		cursor: pointer;
+		display: block;
+		width: 100%;
+		background-color: transparent;
+		text-transform: uppercase;
+		font-family: 'PT Sans';
 	}
 	&:hover{
 		background-color: darken(desaturate(adjust-hue($colorMain, -0.2963), 5.7018), 8.8235);

@@ -1,0 +1,13 @@
+.fields{
+	padding-top: 19px;
+	padding-bottom: 23px;
+	&__title{
+		margin-bottom: 21px;
+	}
+	&__part{
+		margin-bottom: 18px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
