@@ -1,13 +1,56 @@
 .fields{
 	padding-top: 19px;
 	padding-bottom: 23px;
+	@include clear();
 	&__title{
 		margin-bottom: 21px;
+		&:nth-of-type(2){
+			display: none;
+		}
 	}
 	&__part{
 		margin-bottom: 18px;
 		&:last-child{
 			margin-bottom: 0;
+		}
+	}
+}
+
+
+@include apply-to($tablet){
+	.fields{
+		&__title{
+			text-align: left;
+			margin-bottom: 58px;
+			&:nth-of-type(1){
+				display: none;
+			}
+			&:nth-of-type(2){
+				display: block;
+			}
+		}
+		.container{
+			max-width: 266px;
+			float: right;
+		}
+	}
+}
+
+
+@include apply-to($desktop){
+	.fields{
+		&__title{
+			margin-bottom: 54px;
+			&:nth-of-type(1){
+				display: block;
+			}
+			&:nth-of-type(2){
+				display: none;
+			}
+		}
+		.container{
+			max-width: 400px;
+			float: right;
 		}
 	}
 }

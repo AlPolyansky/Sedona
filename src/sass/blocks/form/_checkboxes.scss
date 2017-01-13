@@ -1,8 +1,14 @@
 .checkboxes{
 	padding-top: 19px;
 	padding-bottom: 25px;
+	.container{
+		@include clear();
+	}
 	&__title{
 		margin-bottom: 18px;
+	}
+	&__devider{
+		display: none;
 	}
 	&__part{
 		text-align: left;
@@ -15,5 +21,72 @@
 	}
 	.input-selection__inner{
 		border-radius: 0;
+	}
+}
+
+@include apply-to($tablet){
+	.checkboxes{
+		&__devider{
+			display: block;
+		}
+		.s-form__title-wrap{
+			margin-bottom: 40px;
+			width: 100%;
+		}
+		.container{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		&__part{
+			@include col(6);
+			padding-left: 94px;
+			&:nth-of-type(2){
+				order: 1;
+			}
+			&:nth-of-type(3){
+				order: 3;
+			}
+			&:nth-of-type(4){
+				order: 2;
+				padding-left: 31px;
+			}
+			&:nth-of-type(5){
+				order: 4;
+				padding-left: 31px;
+			}
+			&:nth-child(even){
+				margin-bottom: 33px;
+			}
+		}
+	}
+}
+
+@include apply-to($desktop){
+	.checkboxes{
+		&__part{
+			@include col(3);
+			padding-left: 38px;
+			&:nth-child(4n+2){
+				padding-left: 0;
+			}
+			
+			&:nth-of-type(2){
+				order: 1;
+			}
+			&:nth-of-type(3){
+				order: 3;
+			}
+			&:nth-of-type(4){
+				order: 2;
+				padding-left: 20px;
+			}
+			&:nth-of-type(5){
+				order: 4;
+				padding-left: 38px;
+			}
+			&:nth-child(even){
+				margin-bottom: 0;
+			}
+		}
 	}
 }

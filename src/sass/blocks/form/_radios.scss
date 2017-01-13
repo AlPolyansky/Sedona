@@ -14,3 +14,27 @@
 		}
 	}
 }
+
+@include apply-to($tablet){
+	.radios{
+		padding-bottom: 54px;
+		&__title{
+			text-align: left;
+			margin-bottom: 60px;
+		}
+		&__part{
+			margin-bottom: 21px;
+		}
+	}
+}
+
+@include apply-to($desktop){
+	.radios{
+		padding-bottom: 50px;
+		&__title{
+			text-align: center;
+			position: relative;
+			left: -25px;
+		}
+	}
+}

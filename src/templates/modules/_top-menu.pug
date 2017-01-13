@@ -11,8 +11,9 @@ nav.menu
 		li.menu__item
 			a(href='https://htmlacademy.ru/' title='HTML Academy' target="_blank").menu__link HTML Academy
 .top-menu
-	figure.logo
-		picture.logo__container
-			source(media='(min-width: ' + desktop + ')' srcset='./img/logo-desktop.svg')
-			source(media='(min-width: ' + tablet + ')' srcset='./img/logo-tablet.svg')
-			img.logo__img(src='./img/logo-mobile.svg')
+		figure.logo
+			a(href='/' title='Главная').logo__link
+				picture.logo__container
+					source(media='(min-width: ' + desktop + ')' srcset='./img/logo-desktop.svg')
+					source(media='(min-width: ' + tablet + ')' srcset='./img/logo-tablet.svg')
+					img.logo__img(src='./img/logo-mobile.svg')
